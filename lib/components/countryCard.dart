@@ -10,14 +10,16 @@ class CountryCard extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      //color: Colors.deepPurple,
       padding: const EdgeInsets.all(8),
-      constraints: const BoxConstraints(maxWidth: 512,maxHeight: 2048),
+      constraints: const BoxConstraints(maxWidth: 624),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.network(flag),
           Text(name),
-          Text("Размер: " + size + "тыс. км^2"),
+          const Text("Размер: "),
+          Text( size + "тыс. км^2"),
         ],
       ),
     );
